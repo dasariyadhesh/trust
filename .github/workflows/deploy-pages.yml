@@ -2,6 +2,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  # Allow manual runs from the Actions UI for debugging
+  workflow_dispatch: {}
 
 permissions:
   contents: read
