@@ -2,8 +2,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  # Allow manual runs from the Actions UI for debugging
-  workflow_dispatch: {}
 
 permissions:
   contents: read
@@ -30,25 +28,10 @@ jobs:
         run: |
           npm run build
 
-      - name: Debug: show working directory & built files
-        run: |
-          echo "Current directory: $(pwd)"
-          echo "List repo root:"; ls -la
-          echo "List out/ (if present):"; ls -la out || true
-          echo "Disk usage of out/:"; du -sh out || true
-
-      - name: Debug: git info
-        run: |
-          git --version
-          echo "Git config:"; git config --list
-          echo "Git remote:"; git remote -v
-          echo "Current branch:"; git rev-parse --abbrev-ref HEAD
-          echo "Recent commits:"; git --no-pager log -n 5 --pretty=oneline || true
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: ./out
-
-      - name: Deploy to GitHub Pages (official)
-        uses: actions/deploy-pages@v1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: gh-pages
+          cname: bhusevatrust.org
