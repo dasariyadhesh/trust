@@ -43,13 +43,10 @@ jobs:
           echo "Current branch:"; git rev-parse --abbrev-ref HEAD
           echo "Recent commits:"; git --no-pager log -n 5 --pretty=oneline || true
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          publish_branch: gh-pages
-          cname: bhusevatrust.org
-          allow_empty_commit: true
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          path: ./out
+
+      - name: Deploy to GitHub Pages (official)
+        uses: actions/deploy-pages@v1
