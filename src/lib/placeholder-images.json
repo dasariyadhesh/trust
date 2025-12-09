@@ -1,0 +1,82 @@
+{
+  "placeholderImages": [
+    {
+      "id": "arulneri-1",
+      "description": "Arulneri Domentoies at the Foot of Sathuragiri",
+      "imageUrl": "/images/arulneri-1.jpg",
+      "imageHint": "community event"
+    },
+    {
+      "id": "arulneri-2",
+      "description": "VGrowing Green: Ashram Plantation Crosses 1000+ Plants",
+      "imageUrl": "/images/arulneri-2.jpg",
+      "imageHint": "people volunteering"
+    },
+    {
+      "id": "arulneri-3",
+      "description": "Keni Waterfalls: A Scenic Spot Within 1 km Radius",
+      "imageUrl": "/images/arulneri-3.jpg",
+      "imageHint": "children education"
+    },
+    {
+      "id": "arulneri-4",
+      "description": "Darkening Skies: Cloud Formation Before Rainfall",
+      "imageUrl": "/images/arulneri-4.jpg",
+      "imageHint": "community event"
+    },
+    {
+      "id": "arulneri-5",
+      "description": "Volunteers working together on a project.",
+      "imageUrl": "/images/arulneri-5.jpg",
+      "imageHint": "people volunteering"
+    },
+    {
+      "id": "arulneri-6",
+      "description": "Surrounded by Vast Farmlands and Reserved Forest Areas",
+      "imageUrl": "/images/arulneri-6.jpg",
+      "imageHint": "children education"
+    },
+    {
+      "id": "arulneri-7",
+      "description": "Peaceful Sunrise Visits by Peacocks and Deer from the Reserved Forest",
+      "imageUrl": "/images/arulneri-7.jpg",
+      "imageHint": "children education"
+    },
+    {
+      "id": "annadhanam-1",
+      "description": "Serving fresh meals to the community.",
+      "imageUrl": "/images/annadhanam-1.jpg",
+      "imageHint": "food serving"
+    },
+    {
+      "id": "annadhanam-2",
+      "description": "Preparation of food for the Nithya Annadhanam program.",
+      "imageUrl": "/images/annadhanam-2.jpg",
+      "imageHint": "food preparation"
+    },
+    {
+      "id": "annadhanam-3",
+      "description": "People enjoying a nutritious meal.",
+      "imageUrl": "/images/annadhanam-3.jpg",
+      "imageHint": "people eating"
+    },
+    {
+      "id": "sapling-1",
+      "description": "Distributing saplings to local residents.",
+      "imageUrl": "/images/sapling-1.jpg",
+      "imageHint": "plant sapling"
+    },
+    {
+      "id": "sapling-2",
+      "description": "A volunteer planting a new tree.",
+      "imageUrl": "/images/sapling-2.jpg",
+      "imageHint": "tree planting"
+    },
+    {
+      "id": "sapling-3",
+      "description": "Young saplings ready for distribution.",
+      "imageUrl": "/images/sapling-3.jpg",
+      "imageHint": "small plants"
+    }
+  ]
+}
