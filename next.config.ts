@@ -1,25 +1,11 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export', // 🚀 REQUIRED for GitHub Pages
-  basePath: '/trust', // 🚀 REQUIRED (your repo name)
-  assetPrefix: '/trust/', // 🚀 REQUIRED
+  output: "export",             // 🚀 REQUIRED for static GitHub Pages
+  basePath: "/trust",           // 🚀 repo name
+  assetPrefix: "/trust/",       // 🚀 needed for CSS/JS paths
   images: {
-    unoptimized: true, // GitHub Pages does not support Next image optimization
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        port: '',
-        pathname: '/**',
-      }
-    ],
+    unoptimized: true,          // GitHub Pages does not support Next/Image
   },
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
