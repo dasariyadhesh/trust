@@ -1,29 +1,19 @@
-import type {NextConfig} from 'next';
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",   // ⭐ required instead of next export
+  distDir: "out",     // ⭐ GitHub Pages uses this folder
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // If deploying to a subfolder:
+  // example: https://dasariyadhesh.github.io/trust
+  basePath: "/trust",
+  assetPrefix: "/trust/",
+
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        port: '',
-        pathname: '/**',
-      }
-    ],
+    unoptimized: true,
   },
+
+  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
 };
 
 export default nextConfig;
