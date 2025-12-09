@@ -1,17 +1,26 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",   // ⭐ required instead of next export
-  distDir: "out",     // ⭐ GitHub Pages uses this folder
+import type { NextConfig } from 'next';
 
-  // If deploying to a subfolder:
-  // example: https://dasariyadhesh.github.io/trust
-  basePath: "/trust",
-  assetPrefix: "/trust/",
-
+const nextConfig: NextConfig = {
+  output: 'export', // 🚀 REQUIRED for GitHub Pages
+  basePath: '/trust', // 🚀 REQUIRED (your repo name)
+  assetPrefix: '/trust/', // 🚀 REQUIRED
   images: {
-    unoptimized: true,
+    unoptimized: true, // GitHub Pages does not support Next image optimization
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      }
+    ],
   },
-
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
 };
