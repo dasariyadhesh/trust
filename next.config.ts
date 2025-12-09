@@ -1,31 +1,12 @@
 import type { NextConfig } from "next";
 
-const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
-
 const nextConfig: NextConfig = {
-  // Required for static export
-  output: "export",
-
-  // Works locally AND on GitHub Pages
-  basePath: isGitHubPages ? "/trust" : "",
-  assetPrefix: isGitHubPages ? "/trust/" : "",
-
+  output: "export", // REQUIRED for static export
+  basePath: "/trust", // YOUR REPO NAME
+  assetPrefix: "/trust/", // REQUIRED for CSS/JS/images
   images: {
-    unoptimized: true, // GitHub Pages doesn't support image optimization
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "placehold.co",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "/**",
-      },
-    ],
+    unoptimized: true,
   },
-
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
 };
