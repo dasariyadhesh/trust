@@ -2,15 +2,18 @@
   "name": "nextn",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dasariyadhesh.github.io/trust",
   "scripts": {
     "dev": "next dev --turbopack -p 9002",
     "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
     "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
     "build": "cross-env NODE_ENV=production next build",
     "export": "next build && next export",
-    "start": "next start -p 9002",
+    "predeploy": "next build && next export",
+    "deploy": "gh-pages -d out",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "start": "next start -p 9002"
   },
   "dependencies": {
     "@genkit-ai/google-genai": "^1.20.0",
@@ -45,7 +48,7 @@
     "firebase": "^11.9.1",
     "genkit": "^1.20.0",
     "lucide-react": "^0.475.0",
-    "next": "^15.3.6",
+    "next": "15.3.6",
     "patch-package": "^8.0.0",
     "react": "^19.2.1",
     "react-day-picker": "^9.11.3",
